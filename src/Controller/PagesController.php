@@ -21,7 +21,6 @@ class PagesController extends AbstractController
      */
     public function about(): Response
     {
-        sleep(2);
         return $this->render('pages/about.html.twig');
     }
 }

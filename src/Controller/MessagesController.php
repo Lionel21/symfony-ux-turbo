@@ -53,8 +53,7 @@ class MessagesController extends AbstractController
 
        $form->handleRequest($request);
        if ($form->isSubmitted() && $form->isValid()) {
-           $formData = $form->getData();
-           dd(sprintf('Incoming new message %s <%s> ...', $formData['name'], $formData['email']));
+           $form->getData();
 
            $this->addFlash('success', 'Message sent! We\'ll get you back to you very soon!');
            return $this->redirectToRoute('app_home');
