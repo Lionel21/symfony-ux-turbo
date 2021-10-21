@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Contact' %}
+
+{% block body %}
+
+    <h1>Contact</h1>
+
+    {{ form_start(formulaire) }}
+        {{ form_widget(formulaire) }}
+    <button type="submit" formnovalidate>Send</button> <!-- formnovalidate : évite la validation HTML5 par défaut --->
+    {{ form_end(formulaire) }}
+
+{% endblock %}
